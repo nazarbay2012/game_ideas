@@ -1,0 +1,52 @@
+# Well well i recreated this code now you can use ability too add your ideas for this code
+# and then create your own game
+def play_game():
+    """game start"""
+    choice_ability = input("what ability you want to use (common,rare,legendary,\
+mythic,secret): ")
+    rare_of_ability = {"ability1":"common",
+                       "ability2":"rare",
+                       "ability3":"legendary",
+                       "ability4":"mythic",
+                       "ability5":"secret"}
+    ability = 0
+    distance = 0
+    can_clikck = ["w","s","a","d","f"]
+    clikcs = input("click: ")
+    ability_clikcs = input("use ability:'f' ")
+    if clikcs.lower() in can_clikck:
+        if clikcs.lower() == "w":
+            print("player moved to up")
+            distance += 10
+        if clikcs.lower() == "s":
+            print("player moved to down")
+            distance += 20
+        if clikcs.lower() == "a":
+            print("player moved to left")
+            distance += 30
+        if clikcs.lower() == "d":
+            print("player moved to right")
+            distance += 40
+        if ability_clikcs == "f":
+            if choice_ability == rare_of_ability["ability1"]:
+                print("common ability used")
+                ability += 1
+            if choice_ability == rare_of_ability["ability2"]:
+                print("rare ability used")
+                ability += 2
+            if choice_ability == rare_of_ability["ability3"]:
+                print("legendary ability used")
+                ability += 3
+            if choice_ability == rare_of_ability["ability4"]:
+                print("mythic ability used")
+                ability += 4
+            if choice_ability == rare_of_ability["ability5"]:
+                print("secret ability used")
+                ability += 5
+    else:
+         print("he is still standing")
+    return ability
+    return distance
+
+xyz = play_game()
+
